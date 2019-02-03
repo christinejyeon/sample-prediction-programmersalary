@@ -36,7 +36,7 @@ hcoptslang$thousandsSep <- ","
 options(highcharter.lang = hcoptslang)
 highchart() %>% 
   hc_add_series(salary_byyrscoding, "column", hcaes(x = YearsCoding, y = mean_salary), name="Responses",
-                tooltip = list(pointFormat = "<span style='color:{point.color}'>\u25CF</span> Average salary: {point.mean_salary}")) %>%
+                tooltip = list(pointFormat = "<span style=\"color:{series.color}\">\u25CF</span> Average salary: {point.mean_salary}")) %>%
   hc_xAxis(categories=salary_byyrscoding$YearsCoding,
            title = list(text = "# of years that one has been coding")
   ) %>%
@@ -57,7 +57,7 @@ highchart() %>%
 
 highchart() %>% 
   hc_add_series(salary_bybg, "column", hcaes(x = UndergradMajor, y = mean_salary), name="Responses",
-                tooltip = list(pointFormat = "<span style='color:{point.color}'>\u25CF</span> Average salary: {point.mean_salary}")) %>%
+                tooltip = list(pointFormat = "<span style=\"color:{series.color}\">\u25CF</span> Average salary: {point.mean_salary}")) %>%
   hc_xAxis(categories=salary_bybg$UndergradMajor,
            title = list(text = "Undergraduate major")
   ) %>%
